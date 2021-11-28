@@ -10,12 +10,14 @@ public class Buttons : MonoBehaviour{
     private Animator animator;
     private GameObject error;
     private GameObject validate;
+    private Door linkedDoorScript;
 
     private void Start(){
 
         animator = GetComponent<Animator>();
         error = transform.GetChild(0).gameObject;
-        validate = transform.GetChild(0).gameObject;
+        validate = transform.GetChild(1).gameObject;
+        linkedDoorScript = linkedDoor.GetComponent<Door>();
 
     }
 
@@ -26,7 +28,7 @@ public class Buttons : MonoBehaviour{
             animator.SetTrigger("Validate");
             error.SetActive(false);
             validate.SetActive(true);
-            // Play green animation and open the gate.
+            linkedDoorScript.OpenNow();
 
         }
 
@@ -35,7 +37,6 @@ public class Buttons : MonoBehaviour{
             animator.SetTrigger("Error");
             validate.SetActive(false);
             error.SetActive(true);
-            // Play red animation
 
         }
 
