@@ -37,8 +37,15 @@ public class Buttons : MonoBehaviour{
             animator.SetTrigger("Error");
             validate.SetActive(false);
             error.SetActive(true);
+            Invoke("RParticles", 1.5f);
 
         }
+
+    }
+
+    void RParticles(){
+
+        transform.GetChild(0).gameObject.SetActive(false);
 
     }
 
