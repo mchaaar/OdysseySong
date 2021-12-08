@@ -76,7 +76,6 @@ public class Dialogues : MonoBehaviour {
 
         List<char> tempChars = charsToSpell;
         tempChars.RemoveAt(tempChars.Count - 1);
-        index = tempChars.Count;
         string tempText = "";
 
         foreach (char c in tempChars){
@@ -89,7 +88,7 @@ public class Dialogues : MonoBehaviour {
 
         yield return new WaitForSeconds(timeBetweenEachLetter);
 
-        if (index > tempChars.Count){
+        if (tempChars.Count > 0){
 
             StartCoroutine(EraseText());
 
