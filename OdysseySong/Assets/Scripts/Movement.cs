@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour{
 
     public int speed;
-    public int jumpForce;
+    public float jumpForce;
 
     private float speedMultiplier = 1;
 
