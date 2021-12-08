@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Buttons : MonoBehaviour{
+public class Lever : MonoBehaviour{
 
     public GameObject linkedDoor;
     public bool isUnlocked;
@@ -25,7 +25,7 @@ public class Buttons : MonoBehaviour{
         
         if (isUnlocked){
 
-            animator.SetTrigger("Validate");
+            animator.SetTrigger("Open");
             error.SetActive(false);
             validate.SetActive(true);
             linkedDoorScript.OpenNow();
@@ -34,7 +34,6 @@ public class Buttons : MonoBehaviour{
 
         else{
 
-            animator.SetTrigger("Error");
             validate.SetActive(false);
             error.SetActive(true);
             Invoke("RParticles", 1.5f);
