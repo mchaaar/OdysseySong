@@ -6,6 +6,7 @@ using TMPro;
 public class Dialogues : MonoBehaviour {
 
     public GameObject textUI;
+    public bool multipleLines;
     public string textToSpell;
     public float timeBetweenEachLetter;
     public float timeBeforeStarting;
@@ -29,7 +30,11 @@ public class Dialogues : MonoBehaviour {
 
         }
 
-        Invoke("Now", timeBeforeStarting);
+        if (!multipleLines){
+
+            Invoke("Now", timeBeforeStarting);
+
+        }
 
     }
 
