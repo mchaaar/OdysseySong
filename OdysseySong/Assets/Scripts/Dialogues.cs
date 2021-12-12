@@ -36,11 +36,50 @@ public class Dialogues : MonoBehaviour {
 
         }
 
+        else{
+
+            Invoke("Multiple", timeBeforeStarting);
+
+        }
+
     }
 
     private void Now(){
 
         StartCoroutine(TextUpdate());
+
+    }
+
+    private void Multiple(){
+
+        StartCoroutine(MultipleTextUpdate());
+
+    }
+
+    IEnumerator MultipleTextUpdate(){
+
+        text.text = text.text += charsToSpell[index];
+        index++;
+
+        yield return new WaitForSeconds(timeBetweenEachLetter);
+
+        if (index < charsToSpell.Count){
+
+            StartCoroutine(TextUpdate());
+
+        }
+
+        else {
+
+            StopCoroutine(TextUpdate());
+
+            if (!permanentText){
+
+                Invoke("Erase", timeBeforeErasing);
+
+            }
+
+        }
 
     }
 
