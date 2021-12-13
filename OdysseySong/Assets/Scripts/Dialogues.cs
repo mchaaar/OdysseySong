@@ -7,6 +7,7 @@ public class Dialogues : MonoBehaviour {
 
     public GameObject textUI;
     public bool multipleLines;
+    public List<string> lines = new List<string>();
     public string textToSpell;
     public float timeBetweenEachLetter;
     public float timeBeforeStarting;

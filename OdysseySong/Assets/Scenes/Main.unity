@@ -5210,6 +5210,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6892154338605173035, guid: c0f6ec21de3055b40987601879b64120, type: 3}
   m_PrefabInstance: {fileID: 1339380938}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &264839818 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8392131651189624158, guid: b1e61101632d0b544816ccde41e67f10, type: 3}
+  m_PrefabInstance: {fileID: 8392131651021264274}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &296441065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10454,56 +10459,6 @@ MonoBehaviour:
   player: {fileID: 2118022734}
   offset: 1
   offsetSmoothing: 1
---- !u!1 &530740098
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 530740099}
-  - component: {fileID: 530740100}
-  m_Layer: 0
-  m_Name: Second Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &530740099
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 530740098}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &530740100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 530740098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd8b47e750973754d9fae0909df6ac9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textUI: {fileID: 0}
-  multipleLines: 0
-  textToSpell: 
-  timeBetweenEachLetter: 0
-  timeBeforeStarting: 0
-  permanentText: 0
-  timeBeforeErasing: 0
 --- !u!1001 &632584786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10832,7 +10787,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661095682a4cd284a9d43c73605f85bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToRefresh: 1
 --- !u!4 &919951573
 Transform:
   m_ObjectHideFlags: 0
@@ -10845,7 +10799,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &941113294
 GameObject:
@@ -26779,12 +26733,44 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8392131651249564413, guid: b1e61101632d0b544816ccde41e67f10, type: 3}
+      propertyPath: textUI
+      value: 
+      objectReference: {fileID: 264839818}
+    - target: {fileID: 8392131651249564413, guid: b1e61101632d0b544816ccde41e67f10, type: 3}
       propertyPath: textToSpell
-      value: "Bienvenue \xE0 toi..."
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8392131651249564413, guid: b1e61101632d0b544816ccde41e67f10, type: 3}
       propertyPath: multipleLines
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392131651249564413, guid: b1e61101632d0b544816ccde41e67f10, type: 3}
+      propertyPath: lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392131651249564413, guid: b1e61101632d0b544816ccde41e67f10, type: 3}
+      propertyPath: timeBeforeErasing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392131651249564413, guid: b1e61101632d0b544816ccde41e67f10, type: 3}
+      propertyPath: timeBeforeStarting
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392131651249564413, guid: b1e61101632d0b544816ccde41e67f10, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: "Bienvenue \xE0 toi !"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392131651249564413, guid: b1e61101632d0b544816ccde41e67f10, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: "Comme tu peux le voir tu n'es plus qu'une entit\xE9 quelconque."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392131651249564413, guid: b1e61101632d0b544816ccde41e67f10, type: 3}
+      propertyPath: lines.Array.data[2]
+      value: "R\xE9ussis ces \xE9preuves et tu retrouveras ton corps originel."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392131651249564413, guid: b1e61101632d0b544816ccde41e67f10, type: 3}
+      propertyPath: timeBetweenEachLetter
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8392131651249564415, guid: b1e61101632d0b544816ccde41e67f10, type: 3}
       propertyPath: m_Name
